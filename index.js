@@ -7,7 +7,13 @@ var started = false;
 var level = 0;
 var randomChoosenColur;
 
-
+$('#start').click(function(){
+    if (!started) {
+        $('#level-title').text("level " + level);
+        nextsequence();
+        started = true;
+    }
+});
 $(document).keypress(function () {
     if (!started) {
         $('#level-title').text("level " + level);
